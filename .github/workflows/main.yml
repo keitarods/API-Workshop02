@@ -19,7 +19,7 @@ jobs:
         run: pip install -r requirements-dev.txt
 
       - name: List directory contents
-        run: ls - la
+        run: ls -la
 
       - name: Run tests
         run: pytest -v testes.py
