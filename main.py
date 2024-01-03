@@ -35,3 +35,10 @@ def ola_mundo(): #Response
 @app.get("/produtos")
 def listar_produtos():
     return produtos
+
+@app.get("/produtos/{id}")
+def buscar_produtos(id: int):
+    for produto in produtos:
+        if produto["id"] == id:
+            return produto
+    return "Falha na busca do produto. Favor insira um produto válido"
