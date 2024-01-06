@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 #importa o modulo para interagir com o sistema operacional e
 #load_dotenv do pacote python-dotenv para carregar as variáveis de ambiente de um arquivo .env.
-load_dotenv()
+load_dotenv(dotenv_path=".env.prod")
 
 #Acessa e armazena as variaveis de ambiente específica (Credênciais do banco)
 db_user = os.getenv("POSTGRES_USER")
