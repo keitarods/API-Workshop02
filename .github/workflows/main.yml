@@ -22,12 +22,12 @@ jobs:
           POSTGRES_DB: ${{secrets.POSTGRES_DB}}
           DB_HOST: ${{secrets.DB_HOST}}
           DB_PORT: ${{secrets.DB_PORT}}
-      run: |
-        echo "POSTGRES_USER: $POSTGRES_USER"
-        echo "POSTGRES_DB: $POSTGRES_DB"
-        echo "DB_HOST: $DB_HOST"
-        echo "DB_PORT: $DB_PORT"
-        # Não imprimir oo POSTGRES_PASSWORD Por questões de segurança;
+        run: |
+          echo "POSTGRES_USER: $POSTGRES_USER"
+          echo "POSTGRES_DB: $POSTGRES_DB"
+          echo "DB_HOST: $DB_HOST"
+          echo "DB_PORT: $DB_PORT"
+          # Não imprimir oo POSTGRES_PASSWORD Por questões de segurança;
 
       - name: Install requirements
         run: pip install -r requirements-dev.txt
